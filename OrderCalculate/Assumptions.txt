@@ -1,0 +1,4 @@
+Assumptions
+Price of the items are fixed.
+Oranges is 100 and apple is 120.
+Once the promotion is selected than it can not be applied again.
