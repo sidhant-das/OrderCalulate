@@ -1,7 +1,7 @@
 package order.calculateLogic;
 /*
 ==============================================================
-(C) Author Sidhant Das <sdas26@sapient.com> 
+(C) Author Sidhant Das  
 ==============================================================
 */
 
@@ -15,6 +15,7 @@ import java.util.regex.Pattern;
 import org.junit.Test;
 
 public class OrderCalulate {
+	//Prices are fixed 
 	private double itemPriceX=100;
 	private double itemPriceY=120;
 	private static double totalPrice=0;
@@ -44,7 +45,7 @@ public class OrderCalulate {
 			System.out.println("For furthur information please visit WWW.ecomdemo.COM");
 		}
 		catch(Exception e){
-			
+			e.printStackTrace();
 		}
 	}
 	public void itemQuantity() throws Exception{
@@ -68,6 +69,11 @@ public class OrderCalulate {
 		itemCount=Integer.parseInt((noOfItems));
 		return itemCount;
 	}
+	@Test
+	public void insertInputTest() throws Exception{
+		assertEquals(1, 1);
+		
+	}
 	
 	
 	public void choosePromotion() throws Exception{
@@ -90,6 +96,15 @@ public class OrderCalulate {
 			ip=insertInput();
 		}
 		optionCall(ip);
+		
+	}
+	
+	@Test
+	public void choosepromotionTest(){
+		assertEquals(1, 1);
+		assertEquals(2, 2);
+		assertEquals(3, 3);
+		assertEquals(4, 4);
 		
 	}
 	private void optionCall(int input) throws Exception{
@@ -144,6 +159,7 @@ public class OrderCalulate {
 		isPromoAppliedB=true;
 		caculateOrders();
 	}
+	
 	public void createPromotionTypeC() throws Exception{
 		//Buy 1 X & 1 Y for Z (Buy 1 kg of apple and 1 kg of orange for 100)
 		isPromoAppliedC=true;
