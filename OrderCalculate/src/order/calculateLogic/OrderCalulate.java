@@ -59,7 +59,7 @@ public class OrderCalulate {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		String noOfItems = br.readLine();
 		int itemCount=0;
-		String pattern="\\d.";
+		String pattern="\\d[1-9][0-9].";
 		Pattern pat=Pattern.compile(pattern);
 		Matcher match=pat.matcher(noOfItems);
 		while(match.matches()){
